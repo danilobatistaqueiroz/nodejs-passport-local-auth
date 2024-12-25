@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "2b515d02-5492-46a5-ac8a-821bf887f4b2",
+		"name": "Bearer Auth Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3752514"
+	},
+	"item": [
+		{
+			"name": "usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"joke\", \"email\":\"joke@gmail.com\", \"senha\":\"joke123456\", \"dataNascimento\":\"2001-11-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userid",
+						"value": "78a0f768-2d78-4283-8f23-964f64ce22d",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"aposta alta\",\n    \"conteudo\": \"agora é 10%\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "userid",
+						"value": "78a0f768-2d78-4283-8f23-964f64ce22dao",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/usuario/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "\t\neyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc4YTBmNzY4LTJkNzgtNDI4My04ZjIzLTk2NGY2NGNlMjJkYW8iLCJpYXQiOjE3MzQ5NzI5ODUsImV4cCI6MTczNDk3Mzg4NX0.6NwBk3E406g9a48uoEq6R5vznbUU6QbxDjpoL2Ex8BY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/usuario/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"usuario",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
